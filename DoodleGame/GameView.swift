@@ -64,20 +64,21 @@ struct GameView: View {
                         .padding()
                     }
                     
-                    //MARK: Past Guessses (outside zstack)
+                    //MARK: Past Guessses (Outside zstack)
                     pastGuess
                     
                 }
                 .padding(.horizontal, 30)
                 .ignoresSafeArea(.keyboard, edges: .bottom)
-               
+            }
+            VStack {
+                Spacer()
+                promptGroup
             }
         }
     }
     
-    
-    
-        
+    //MARK: Create some views
     var topBar: some View {
         
         ZStack {
@@ -87,19 +88,16 @@ struct GameView: View {
                 } label: {
                     Image(systemName: "arrow.left.circle")
                         .resizable()
-                        .font(.largeTitle)
+                        .bold()
+                        .font(.title2)
                         .frame(width: 50, height: 50)
-                        .tint(Color(matchManager.currentlydrawing ? "primayYellow" : "primaryPurple"))
+                        .tint(Color(matchManager.currentlydrawing ? "primaryYellow" : "primaryPurple"))
                     
                     // NOTE: GridGame Logic
-                    /*
-                     
-                     1. .fill(Color(observedObjectPage.currentChoice ? "red" : "black"))
+                /*   1. .fill(Color(observedObjectPage.currentChoice ? "red" : "black"))
                      2.  [false, false, true, false, false, false, false, false]
                      3.  [false, false, false, true, false, false, false, false]
-                     4.  [false, false, false, false, false, true, false, false]
-                     
-                     */
+                     4.  [false, false, false, false, false, true, false, false] */
                 }
                 Spacer()
                 
@@ -113,7 +111,7 @@ struct GameView: View {
         }
         .padding(.vertical, 15)
     }
-    //MARK: Here for saving some passed guesses
+    
     var pastGuess: some View {
         ScrollView {
             ForEach(matchManager.pastGuesses) { guess in
@@ -132,7 +130,6 @@ struct GameView: View {
             .padding(.bottom, 1)
         }
         .padding()
-        .frame(width: .infinity)
         .background(
             (matchManager.currentlydrawing ? Color(red: 0.243, green: 0.773, blue: 0.745) : Color("primaryYellow"))
                 .brightness(-0.2)
@@ -141,9 +138,27 @@ struct GameView: View {
         )
         .cornerRadius(20)
         .padding(.vertical)
-        .padding(.bottom, 120)
+        .padding(.bottom, 130)
     }
-        
+    
+    // PromptGroup for the Topic showing
+    var promptGroup: some View {
+        VStack {
+            if matchManager.currentlydrawing {
+                Label("DRAW:", systemImage: "exclamationmark.bubble.fill")
+                    .font(.title2)
+                    .bold()
+                    .foregroundColor(.white)
+                Text(matchManager.drawPrompt.uppercased())
+                    .font(.largeTitle)
+                    .bold()
+                    .padding()
+                    .foregroundColor(Color("primaryYellow"))
+            } else {
+                
+            }
+        }
+    }
 
 }
 
