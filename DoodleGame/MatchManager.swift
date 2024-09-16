@@ -13,7 +13,7 @@ class MatchManager: ObservableObject {
     @Published var isGameOver = false
     @Published var authentivationState = PlayerAuthState.authenticating
     
-    @Published var currentlydrawing = false
+    @Published var currentlydrawing = true
     @Published var drawPrompt = ""
     @Published var pastGuesses = [PastGuess]()
     
