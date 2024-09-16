@@ -32,7 +32,7 @@ class MatchManager: ObservableObject {
         return windowScene?.windows.first?.rootViewController
     }
     func authenticateUser() {
-        GKLocalPlayer.local.authenticateHandler = {[ self ] vc, e in
+        GKLocalPlayer.local.authenticateHandler = { [self] vc, e in
         
             if let viewController = vc {
                 rootViewController?.present(viewController, animated: true)

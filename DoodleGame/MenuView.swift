@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainView : View {
+struct MenuView : View {
     
     @ObservedObject var matchManager: MatchManager
     
@@ -54,5 +54,5 @@ struct MainView : View {
 }
 
 #Preview {
-    MainView(matchManager: MatchManager())
+    MenuView(matchManager: MatchManager())
 }

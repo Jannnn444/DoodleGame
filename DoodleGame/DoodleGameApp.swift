@@ -11,8 +11,7 @@ import SwiftUI
 struct DoodleGameApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            GameView(matchManager: MatchManager())
+            ContentView()
         }
     }
 }

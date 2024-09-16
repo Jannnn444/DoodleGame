@@ -13,7 +13,7 @@
 		54C905802C91522D001920C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54C9057F2C91522D001920C2 /* Preview Assets.xcassets */; };
 		54C905872C915240001920C2 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C905862C915240001920C2 /* Misc.swift */; };
 		54C905892C9153BB001920C2 /* MatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C905882C9153BB001920C2 /* MatchManager.swift */; };
-		54C9058B2C9154CD001920C2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C9058A2C9154CD001920C2 /* MainView.swift */; };
+		54C9058B2C9154CD001920C2 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C9058A2C9154CD001920C2 /* MenuView.swift */; };
 		54C905A82C915914001920C2 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C905A72C915914001920C2 /* GameOverView.swift */; };
 		54C905AA2C960194001920C2 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C905A92C960194001920C2 /* GameView.swift */; };
 		54C905AC2C97620F001920C2 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C905AB2C97620F001920C2 /* DrawingView.swift */; };
@@ -27,7 +27,7 @@
 		54C9057F2C91522D001920C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		54C905862C915240001920C2 /* Misc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
 		54C905882C9153BB001920C2 /* MatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchManager.swift; sourceTree = "<group>"; };
-		54C9058A2C9154CD001920C2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		54C9058A2C9154CD001920C2 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		54C905A72C915914001920C2 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		54C905A92C960194001920C2 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		54C905AB2C97620F001920C2 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 				54C9057E2C91522D001920C2 /* Preview Content */,
 				54C905862C915240001920C2 /* Misc.swift */,
 				54C905882C9153BB001920C2 /* MatchManager.swift */,
-				54C9058A2C9154CD001920C2 /* MainView.swift */,
+				54C9058A2C9154CD001920C2 /* MenuView.swift */,
 				54C905A72C915914001920C2 /* GameOverView.swift */,
 				54C905A92C960194001920C2 /* GameView.swift */,
 				54C905AB2C97620F001920C2 /* DrawingView.swift */,
@@ -161,7 +161,7 @@
 				54C905892C9153BB001920C2 /* MatchManager.swift in Sources */,
 				54C9057B2C91522B001920C2 /* ContentView.swift in Sources */,
 				54C905AC2C97620F001920C2 /* DrawingView.swift in Sources */,
-				54C9058B2C9154CD001920C2 /* MainView.swift in Sources */,
+				54C9058B2C9154CD001920C2 /* MenuView.swift in Sources */,
 				54C905A82C915914001920C2 /* GameOverView.swift in Sources */,
 				54C905792C91522B001920C2 /* DoodleGameApp.swift in Sources */,
 				54C905AA2C960194001920C2 /* GameView.swift in Sources */,

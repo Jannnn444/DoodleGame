@@ -12,7 +12,7 @@ let everydayObjects = [
 ]
 
 enum PlayerAuthState: String {
-    case authenticating = "Logging in to Game Center"
+    case authenticating = "Log In to Game Center"
     case unauthenticated = "Please sign in to Game Center to play"
     case authenticated = ""
     

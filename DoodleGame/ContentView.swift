@@ -8,15 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    @StateObject var matchManager = MatchManager() //Differnces between the : ?
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack{
+            
+            //MARK: Deal with views we need to show in differ cases
+            
+            if matchManager.isGameOver {
+                GameOverView(matchManager: matchManager)
+            } else if matchManager.inGame {
+                GameView(matchManager: matchManager)
+            } else {
+                MenuView(matchManager: matchManager)
+            }
         }
-        .padding()
+        .onAppear() {
+            matchManager.authenticateUser()
+            //when this ContentView Appeared, jump authenticateUser()
+        }
     }
 }
 
