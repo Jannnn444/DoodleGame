@@ -161,17 +161,29 @@ struct GameView: View {
                     .font(.title2)
                     .bold()
                     .foregroundColor(Color("primaryPurple"))
-            }
-            HStack{
-                Button {
-                    makeGuess()
-                } label: {
-                   Image(systemName: "arrowshape.forward.fill")
-                        .renderingMode(.original)
-                        .foregroundColor(Color("primaryPurple"))
-                        .font(.system(size: 50))
+                HStack{
+                    
+                    TextField("Type your guess", text: $drawingGuess)
+                        .padding()
+                        .background(
+                            Capsule(style: .circular)
+                                .fill(.white)
+                        )
+                        .onSubmit() {
+                            makeGuess()
+                        }
+                    
+                    Button {
+                        makeGuess()
+                    } label: {
+                       Image(systemName: "arrowshape.forward.fill")
+                            .renderingMode(.original)
+                            .foregroundColor(Color("primaryPurple"))
+                            .font(.system(size: 50))
+                    }
                 }
             }
+
             
         }
         .frame(maxWidth: .infinity)
