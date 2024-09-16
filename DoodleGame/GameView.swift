@@ -20,7 +20,7 @@ struct GameView: View {
     var body: some View {
         ZStack {
             GeometryReader { _ in
-                Image(matchManager.currentlydrawing ? "drawBg" : "guesserBg")
+                Image(matchManager.currentlydrawing ? "drawerBg" : "guesserBg")
                     .resizable()
                     .scaledToFill()
                     .ignoresSafeArea()
@@ -52,19 +52,31 @@ struct GameView: View {
                                             .padding(.top, 10)
                                     }
                                 }
+                                   
                             }
-                            Spacer()
-                            // this push the H up to top of V
+
+                            .padding()
+                            // this push the H eraser up to top of V
                             // Result: on the top left by spacer
+                            Spacer()
+                            
                         }
                         .padding()
                     }
                     
+                    //MARK: Past Guessses (outside zstack)
+                    pastGuess
+                    
                 }
+                .padding(.horizontal, 30)
+                .ignoresSafeArea(.keyboard, edges: .bottom)
                
             }
         }
     }
+    
+    
+    
         
     var topBar: some View {
         
@@ -101,6 +113,7 @@ struct GameView: View {
         }
         .padding(.vertical, 15)
     }
+    //MARK: Here for saving some passed guesses
     var pastGuess: some View {
         ScrollView {
             ForEach(matchManager.pastGuesses) { guess in
@@ -118,7 +131,20 @@ struct GameView: View {
             .frame(maxWidth: .infinity)
             .padding(.bottom, 1)
         }
+        .padding()
+        .frame(width: .infinity)
+        .background(
+            (matchManager.currentlydrawing ? Color(red: 0.243, green: 0.773, blue: 0.745) : Color("primaryYellow"))
+                .brightness(-0.2)
+                .opacity(0.5)
+               
+        )
+        .cornerRadius(20)
+        .padding(.vertical)
+        .padding(.bottom, 120)
     }
+        
+
 }
 
 #Preview {
