@@ -157,8 +157,22 @@ struct GameView: View {
                     .padding()
                     .foregroundColor(Color("primaryYellow"))
             } else {
-               
+                Label("GUESS THE DRAWING:", systemImage: "exclamationmark.bubble.fill")
+                    .font(.title2)
+                    .bold()
+                    .foregroundColor(Color("primaryPurple"))
             }
+            HStack{
+                Button {
+                    makeGuess()
+                } label: {
+                   Image(systemName: "arrowshape.forward.fill")
+                        .renderingMode(.original)
+                        .foregroundColor(Color("primaryPurple"))
+                        .font(.system(size: 50))
+                }
+            }
+            
         }
         .frame(maxWidth: .infinity)
         .padding([.horizontal], 30)
