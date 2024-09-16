@@ -36,11 +36,12 @@ struct GameView: View {
                                 RoundedRectangle(cornerRadius: 10)
                                     .stroke(.black, lineWidth: 10)
                             )
+                            .padding()
+                           
                         
                         VStack {
                             HStack{
                                 Spacer() // this push h in H to the left
-                                
                                 if matchManager.currentlydrawing {  //if is true
                                     Button {
                                         eraserEnabled.toggle()
@@ -58,8 +59,7 @@ struct GameView: View {
                         }
                         .padding()
                     }
-                    pastGuess
-                  
+                    
                 }
                
             }
@@ -101,7 +101,6 @@ struct GameView: View {
         }
         .padding(.vertical, 15)
     }
-    
     var pastGuess: some View {
         ScrollView {
             ForEach(matchManager.pastGuesses) { guess in
