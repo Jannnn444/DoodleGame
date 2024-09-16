@@ -74,9 +74,11 @@ struct GameView: View {
             VStack {
                 Spacer()
                 promptGroup
-            }
+            }.ignoresSafeArea(.container) //this will still be push by keyboard(?
         }
     }
+    
+    
     
     //MARK: Create some views
     var topBar: some View {
@@ -155,9 +157,18 @@ struct GameView: View {
                     .padding()
                     .foregroundColor(Color("primaryYellow"))
             } else {
-                
+               
             }
         }
+        .frame(maxWidth: .infinity)
+        .padding([.horizontal], 30)
+        .padding(.vertical)
+        .background(
+            (matchManager.currentlydrawing ? Color(red: 0.243, green: 0.773, blue: 0.745) : Color("primaryYellow"))
+                .opacity(0.5)
+                .brightness(-0.2)
+        )
+       
     }
 
 }
