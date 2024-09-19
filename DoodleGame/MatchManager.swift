@@ -61,7 +61,7 @@ class MatchManager: ObservableObject {
         request.minPlayers = 2
         request.maxPlayers = 2
         
-        let matchmakingVC = GKMatchmakerViewController(matchRequest: request)
+//        let matchmakingVC = GKMatchmakerViewController(matchRequest: request)
        
     }
 }
