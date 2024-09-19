@@ -17,6 +17,7 @@ struct GameView: View {
         //TODO: Submit the guess
     }
     //TODO: Fixed the eraser functionality
+    //Have to be work harder 
     
     var body: some View {
         ZStack {

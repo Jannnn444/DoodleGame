@@ -54,4 +54,14 @@ class MatchManager: ObservableObject {
             }
         }
     }
+    
+    func startMatchMaking() {
+        let request =
+        GKMatchRequest()
+        request.minPlayers = 2
+        request.maxPlayers = 2
+        
+        let matchmakingVC = GKMatchmakerViewController(matchRequest: request)
+       
+    }
 }
